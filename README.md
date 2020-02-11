@@ -37,7 +37,7 @@ This cancelbot does not look at article bodies and is therefore content-blind.
 
 Inputs:
 
-argv[1] (required) hosts file
+`argv[1] (required) hosts file`
 
 A line that starts with # is a comment. Otherwise, each line contains the
 following 5 fields:
@@ -50,12 +50,12 @@ following 5 fields:
 
 Example of a hosts file:
 
+```
 # ask the local server for new news and post back the cancels
 127.0.0.1 119 Y P 60
 # don't get message-ids from remote server, but give it cancels via IHAVE
 news.xx.net 119 N I 300
-
-
+```
 argv[2] (required) target file
 
 A line that starts with # is a comment. Otherwise, each line contains the
@@ -101,14 +101,14 @@ Path: nhosta!nhostb!ohost3!ohost4
 7. Name of the file appended to the header or 'none'
 
 Examples:
-
+```
 # should be supplied as a courtesy
 X-Cancelled-By: Cancelbot
 # if and only if target file field 3 contains 'N':
 Subject: Cancelling a Usenet article
 # only if posting via IHAVE:
 NNTP-Posting-Host: usenet.cabal.org
-
+```
 8. Name of the file that will become the body of the cancel or 'none'
 
 If 'none' is specified, the default will be
@@ -118,12 +118,12 @@ If 'none' is specified, the default will be
 but may be set to something like misc.test (or misc.test,alt.test).
 
 Example of a target file:
-
+```
 # delete all articles that mention C++ (but not c++)
 comp.lang.c.* C++ C cancel. cyberspam 3 can.hdr none none
 # no sex in the sci hierarchy, and add misc.test to the cancel
 sci.* sex C cn. plutonium 2 can1.hdr can.txt misc.test
-
+```
 argv[3] (optional) datestamp, YYMMDD. If not specified, default is 900101. Only
 articles after this date are examined. This parameter is not processed by the
 cancelbot, but passed on to the NNTP server. It should normally be specified
