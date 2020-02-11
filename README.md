@@ -37,7 +37,7 @@ This cancelbot does not look at article bodies and is therefore content-blind.
 
 Inputs:
 
-`argv[1] (required) hosts file`
+argv[1] (required) hosts file
 
 A line that starts with # is a comment. Otherwise, each line contains the
 following 5 fields:
