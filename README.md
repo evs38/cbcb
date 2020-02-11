@@ -1,9 +1,5 @@
-# cbcb
-Content-Blind Cancelbot for Usenet
-
-      			  by Dr.Dimitri Vulis (KOTM)
-
-               A Content-Blind Cancelbot for Usenet (CBCB)
+## by Dr.Dimitri Vulis (KOTM)
+# A Content-Blind Cancelbot for Usenet (CBCB)
 
 Usenet News is a popular system for transmitting articles. Historically it
 used to propagate over UUCP. However today most of the transmission is done
